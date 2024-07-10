@@ -1,0 +1,323 @@
+/* CSS Global Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover; /* Sesuaikan ukuran latar belakang */
+    color: #040406; /* Warna teks untuk kontras yang lebih baik pada latar belakang gelap */
+    height: 100%;
+}
+
+/* Jumbotron Style */
+.jumbotron {
+    position: relative;
+    background: url('image/beground.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fffcfc;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem; /* Adjust font-size for better readability */
+    padding: 0 20px; /* Add padding for better mobile spacing */
+    animation: fadeIn 2s ease-in-out; /* Add animation */
+}
+
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Black transparent background */
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out; /* Add animation */
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Query untuk perangkat mobile dan tablet */
+@media (max-width: 992px) {
+    .jumbotron {
+        height: 600px; /* Tinggi jumbotron untuk tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .jumbotron {
+        height: 500px; /* Tinggi jumbotron untuk mobile */
+        font-size: 0.9rem; /* Ukuran font yang sedikit lebih kecil untuk mobile */
+    }
+
+    .jumbotron .container {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+/* Button Custom Style */
+.btn-custom {
+    background-color: #0062cc;
+    color: rgb(6, 6, 6);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-custom:hover {
+    background-color: #004085;
+}
+
+/* About Section Style */
+#about {
+    padding: 60px 20px;
+    background-color: #8f939871;
+}
+
+/* Container Style */
+#about .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Heading Style */
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #050607;
+}
+
+/* Paragraph Style */
+#about p.lead {
+    font-size: 18px;
+    color: #01060b;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Text Centering */
+.text-center {
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 28px;
+    }
+
+    #about p.lead {
+        font-size: 16px;
+    }
+}
+
+/* Footer Style */
+.footer {
+    background-color: #09090ae8;
+    color: rgb(252, 254, 255);
+    padding: 10px 0; /* Atur padding sesuai kebutuhan */
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center; /* Mengatur agar konten footer berada di tengah */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer .footer-row {
+    display: flex;
+    justify-content: space-between; /* Mengatur agar kolom footer berada dalam jarak yang sesuai */
+    flex-wrap: wrap;
+}
+
+.footer .footer-column {
+    flex: 1;
+    margin: 10px; /* Atur margin antar kolom */
+    text-align: center; /* Mengatur teks agar berada di tengah setiap kolom */
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #1086e7;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Portfolio Section Style */
+#portfolio {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+/* Container Style */
+#portfolio .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading Style */
+#portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #060809;
+}
+
+/* Paragraph Style */
+#portfolio p.lead {
+    font-size: 18px;
+    color: #040404;
+    margin-bottom: 40px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgb(249, 229, 14);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgb(226, 234, 3);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Set the height for uniform image size */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Card Body Style */
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #050306;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #08050a;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #portfolio h2 {
+        font-size: 28px;
+    }
+
+    #portfolio p.lead {
+        font-size: 16px;
+    }
+
+    .card-img-top {
+        height: 200px; /* Adjust the height for smaller screens */
+    }
+}
+
+/* Navbar Style */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-custom {
+    background-color: #525257; /* Background color */
+    color: #faf9fb; /* Text color */
+}
+
+.navbar-custom .nav-link {
+    color: #fbfbfe !important; /* Text color for links */
+}
+
+.navbar-custom .nav-link:hover {
+    color: #f7f8fb !important; /* Text color on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    /* Adjustments for tablets */
+    .jumbotron {
+        height: 600px; /* Example adjustment */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for mobile phones */
+    .jumbotron {
+        height: 500px; /* Example adjustment */
+        font-size: 0.9rem; /* Slightly reduce font size */
+    }
+
+    .jumbotron .container {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+/* Styles untuk foto profil */
+.profile-img {
+    width: 200px; /* Ukuran foto profil */
+    height: 200px;
+    border-radius: 50%; /* Untuk membuat foto menjadi lingkaran */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.back-btn {
+    margin-top: 20px;
+}
